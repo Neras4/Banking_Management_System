@@ -7,11 +7,11 @@ public class AccountsManagementMethods {
     public static void addAccount(List<BankAccount> accounts) {
         System.out.println("\nAdding new account:");
         String id = promptNumeric("Enter ID:");
-        // Check if an account with the same ID already exists
+
         for (BankAccount account : accounts) {
             if (account.getId().equals(id)) {
                 System.out.println("An account with the same ID already exists. Cannot add duplicate accounts.");
-                return; // Exit the method if a duplicate account is found
+                return;
             }
         }
         String firstName = promptAlphabetic("Enter First Name:");
